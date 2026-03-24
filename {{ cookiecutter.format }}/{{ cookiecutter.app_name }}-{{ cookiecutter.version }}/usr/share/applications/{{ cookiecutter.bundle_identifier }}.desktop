@@ -7,6 +7,6 @@ Icon={{ cookiecutter.bundle_identifier }}
 Categories=Education;Languages;KDE;Qt;
 Comment={{ cookiecutter.description }}
 StartupWMClass={{ cookiecutter.app_name }}
-MimeType={% for document_type_id, document_type in cookiecutter.document_types|dictsort -%}{% if document_type.get('mime_type') %}{{ document_type.mime_type }}{% else %}application/x-{{ cookiecutter.app_name }}-{{ document_type_id }}{% endif %};{%- endfor %}
+MimeType=application/vnd.anki;{% for document_type_id, document_type in cookiecutter.document_types|dictsort -%}{% if document_type.get('mime_type') %}{{ document_type.mime_type }}{% else %}application/x-{{ cookiecutter.app_name }}-{{ document_type_id }}{% endif %};{%- endfor %}
 Terminal=false
 SingleMainWindow=true
